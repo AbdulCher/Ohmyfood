@@ -1,4 +1,5 @@
 @use 'reset'; // Import du fichier _reset.scss
+@use 'variables'; // Import du fichier _variables
 
 * a {
     text-decoration: none;
@@ -36,7 +37,7 @@ input {
 }
 
                                 /*    SECTION INFO    */
-$light-gray: #F3F3F3; 
+
 
 .info {
     text-align: center;
