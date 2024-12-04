@@ -15,8 +15,8 @@
 <body>
     <header>
         <div>
-            <div class="logo">
-                <img src="images/logo/ohmyfood.png" alt="logo-du-site-ohmyfood">
+            <div>
+                <img src="images/logo/ohmyfood.png" class="main-logo" alt="logo-du-site-ohmyfood">
             </div>
             <div class="geolocal">
                 <i class="fa fa-map-marker-alt"></i>
@@ -38,111 +38,105 @@
     <nav>
         <h2 class="title">Fonctionnement</h2>
         <ol>
-            <li>
+            <li class="navlist">
                 <i class="fa fa-mobile-screen-button"></i>
                 <a href="">Choisissez un restaurant</a>
             </li>
-            <li>
+            <li class="navlist">
                 <i class="fa-solid fa-list-ul"></i>
                 <a href="">Composez votre menu</a>
             </li>
-            <li>
+            <li class="navlist">
                 <i class="fa-solid fa-store"></i>
                 <a href="">Dégustez au restaurant</a>
             </li>
         </ol>
     </nav>
     <main>
-        <section>
+        <section class="nos-restaurants">
             <h2 class="title">Restaurants</h2>
             <div class="restaurants-cards">
-                <div class="cards">
-                    <div class="card-content">
-                        <a href="page1.html">
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                <a href="page1.html">
+                    <article class="card">
+                        <div class="card-content">
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="img-restaurant" alt="">
                             <div class="card-txt">
-                                <div class="card-title">
-                                    <h3>La palette du goût</h3>
-                                    <p>Ménimontant</p>
-                                    <div class="card-subtitle">
-                                        <i class="fa fa-heart"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>   
-                </div>
-                <div class="cards">
-                    <div class="card-content">
-                        <a href="page2.html">
-                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                                <h3 class="card-title">La palette du goût</h3>
+                                <p class="card-subtitle">Ménimontant</p>
+                            </div>   
+                            <div class="card-rating">
+                                <i class="fa fa-heart"></i>
+                            </div>  
+                        </div>  
+                    </article>     
+                </a>
+                <a href="page2.html">
+                    <article class="card">
+                        <div class="card-content">
+                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" class="img-restaurant" alt="">
                             <div class="card-txt">
-                                <div class="card-title">
-                                    <h3>La note enchainée</h3>
-                                    <p>Charonne</p>
-                                    <div class="card-subtitle">
-                                        <i class="fa fa-sharp fa-thin fa-heart"></i>
-                                    </div>
-                                </div>
+                                <h3 class="card-title">La note enchainée</h3>
+                                <p class="card-subtitle">Charonne</p>
+                            </div>  
+                            <div class="card-rating">
+                                <i class="fa fa-sharp fa-thin fa-heart"></i>
                             </div>
-                        </a>   
-                    </div>
-                </div> 
-                <div class="cards"> 
-                    <div class="card-content">
-                        <a href="page3.html">
-                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                        </div>   
+                    </article>
+                </a>   
+                <a href="page3.html">
+                    <article class="card">
+                        <div class="card-content">
+                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="img-restaurant" alt="">
                             <div class="card-txt">
-                                <div class="card-title">
-                                    <h3>À la française</h3>
-                                    <p>Cité Rouge</p>
-                                    <div class="card-subtitle">
-                                        <i class="fa fa-thin fa-heart"></i>
-                                    </div>
-                                </div>
+                                <h3 class="card-title">À la française</h3>
+                                <p class="card-subtitle">Cité Rouge</p>
                             </div>
-                        </a>
-                    </div>
-                </div> 
-                <div class="cards">     
-                    <div class="card-content">
-                        <a href="page4.html">
-                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                            <div class="card-rating">
+                                <i class="fa fa-thin fa-heart"></i>
+                            </div>
+                        </div>
+                    </article>    
+                </a>
+                <a href="page4.html">    
+                    <article class="card">
+                        <div class="card-content">
+                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="img-restaurant" alt="">
                             <div class="card-txt">
-                                <div class="card-title">
-                                    <h3>Le délice des sens</h3>
-                                    <p>Folie-Méricourt</p>
-                                    <div class="card-subtitle">
-                                        <i class="fa fa-thin fa-heart"></i>
-                                    </div>
-                                </div>
+                                <h3 class="card-title">Le délice des sens</h3>
+                                <p class="card-subtitle">Folie-Méricourt</p>
                             </div>
-                        </a>  
-                    </div>
-                </div>    
-            </div>
+                            <div class="card-rating">
+                                <i class="fa fa-thin fa-heart"></i>
+                            </div>
+                        </div>
+                    </article>
+                </a>  
+            </div>    
         </section>
     </main>
     <footer>
-        <div class="logo">
-            <img src="images/logo/ohmyfood.png" alt="logo-du-site-ohmyfood">
+        <div class="footer-content">
+            <div>
+                <img src="images/logo/ohmyfood.png" class="footer__logo" alt="logo-du-site-ohmyfood">
+            </div>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-utensils"></i>
+                    <a href="">Proposez un restaurant</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <a href="">Proposez un restaurant</a>
+                </li>
+                <li>
+                    <a href="">Mentions légales</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
         </div>
-        <ul>
-            <li>
-                <i class="fa-solid fa-utensils"></i>
-                <a href="">Proposez un restaurant</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-handshake-angle"></i>
-                <a href="">Proposez un restaurant</a>
-            </li>
-            <li>
-                <a href="">Mentions légales</a>
-            </li>
-            <li>
-                <a href="">Contact</a>
-            </li>
-        </ul>
     </footer>
 </body>
 </html>
