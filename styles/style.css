@@ -48,46 +48,38 @@ table {
   border-spacing: 0;
 }
 
-* {
-  font-family: "Roboto" sans-serif;
-}
-
 * a {
   text-decoration: none;
+  color: #000;
+}
+
+*,
+*::before *::after {
+  box-sizing: border-box;
 }
 
 /*   HEADER  */
-.header-content {
-  display: flex;
-  flex-direction: row;
-}
-
-.header__link {
-  width: 30px;
-  padding: 20px;
-}
-
 .main-logo {
-  display: flex;
+  padding: 20px 90px;
   width: 200px;
   height: 34px;
-  padding: 20px 90px;
 }
 
-.header__logo {
-  width: 200px;
-  height: 34px;
+.geolocal {
+  padding: 20px 100px;
+  background-color: rgb(230.7, 230.7, 230.7);
+}
+
+.ville {
   padding: 20px;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
 }
 
 input {
   border: none;
-}
-
-.geolocal {
-  border: solid black;
-  padding: 20px 100px;
-  background-color: #F6F6F6;
 }
 
 /*    SECTION INFO    */
@@ -99,14 +91,20 @@ input {
 .title {
   font-weight: bolder;
   font-size: 24px;
-  padding: 20px 80px 10px 80px;
+  padding: 20px 80px 10px 20px;
+}
+
+.main-title {
+  font-weight: bolder;
+  font-size: 24px;
+  padding: 20px 80px 10px 60px;
 }
 
 .text {
-  padding: 0px 70px 20px 70px;
+  padding: 0px 50px 20px 20px;
 }
 
-button {
+.command-btn {
   border: transparent;
   padding: 12px 15px;
   border-radius: 50px;
@@ -117,17 +115,45 @@ button {
 /*  NAV  */
 .navlist {
   border-radius: 20px;
-  padding: 20px 80px;
   margin: 20px;
-  list-style-type: decimal;
   background-color: #F3F3F3;
+  transition-property: transform;
+  transition-duration: 100ms;
+}
+.navlist:hover {
+  transform: scale(1.03);
+}
+
+.navlist-icone {
+  padding: 20px 30px 20px 30px;
+}
+
+.navlist-icone {
+  color: #9356DC;
+}
+
+.list-number {
+  margin: -4px;
+  padding: 6px 8px;
+  border-radius: 50px;
+  font-size: x-small;
+  background-color: #9356DC;
+  color: white;
+}
+
+.btn-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .btn {
   background-color: white;
   border-radius: 10px;
   padding: 10px;
-  margin: 10px;
+  margin: 10px 0px 10px 0px;
 }
 
 .btn-title, .card-title {
@@ -137,19 +163,34 @@ button {
 }
 
 /*    MAIN      */
-.card-txt {
-  padding: 20px;
-}
-
-.card-rating {
-  display: flex;
-}
-
 .card {
   box-sizing: border-box;
   background-color: white;
   border-radius: 20px;
   margin: 20px;
+}
+
+.card-txt {
+  display: grid;
+  grid-template: 1fr 1fr 1fr;
+  gap: 5px;
+  padding: 10px;
+}
+
+.card-title {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.card-subtitle {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.card-rating {
+  grid-column: 3;
+  grid-row: 1;
+  padding-left: 80px;
 }
 
 .img-restaurant {
@@ -158,6 +199,18 @@ button {
   margin: 0px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
+}
+
+.image-textover {
+  position: relative;
+}
+
+.text-over {
+  position: absolute;
+  top: 10%;
+  left: 75%;
+  padding: 6px 10px;
+  background-color: #99E2D0;
 }
 
 .nos-restaurants {
@@ -172,6 +225,7 @@ button {
 
 .container {
   background-color: #F3F3F3;
+  padding: 10px;
 }
 
 /*      FOOTER     */
@@ -179,6 +233,7 @@ button {
   background-color: black;
   color: white;
   padding: 20px;
+  line-height: 30px;
 }
 
 .footer-content a {
@@ -188,6 +243,66 @@ button {
 .footer__logo {
   width: 150px;
   filter: invert(100%) brightness(100%);
+}
+
+/*    PAGE    */
+.header-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.price {
+  border: transparent;
+}
+
+.header__link {
+  width: 30px;
+  padding: 20px;
+}
+
+.header__logo {
+  width: 200px;
+  height: 34px;
+}
+
+.page-title {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.img-page {
+  aspect-ratio: 16/9;
+  width: 100%;
+  margin: 0px;
+  object-fit: cover;
+}
+
+.title-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 10px 30px 0px;
+}
+
+.element1 {
+  position: relative;
+  z-index: 1;
+}
+
+.element2 {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  left: 0%;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+.menu-title {
+  border-bottom: solid #99E2D0;
+  padding-bottom: 5px;
+  width: 12%;
 }
 
 /*# sourceMappingURL=style.css.map */

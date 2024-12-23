@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/style.css">   
 </head>
 <body>
-    <header>
+    <header class="element1">
         <div class="header-content">
             <div class="header__link">
                 <a href="index.html">
@@ -24,27 +24,31 @@
                 <img src="images/logo/ohmyfood.png" class="header__logo" alt="logo-du-site-ohmyfood">
             </div>
         </div> 
-    </header>
-    <main class="container">
-        <div class="box box1">
-            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="img-restaurant" alt="">
+        <div class="">
+            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" 
+            class="img-page" alt="image-du-restaurant-la-palette-du-gout">
         </div>
-        <div class="box box2">
-            <div>
-                <h1>La palette du goût</h1>
-                <i class="fa fa-sharp fa-thin fa-heart"></i>
-            </div>
-            <section class="entree">
-                <h2>ENTREES</h2>
+    </header>
+    
+    <main class="element2 container">   
+        <div class="title-content">
+            <h1 class="page-title">La palette du goût</h1>
+            <i class="fa fa-sharp fa-thin fa-heart"></i>
+        </div>
+        <section class="entree">
+            <h2 class="menu-title">ENTREES</h2>
+            <a href="">
                 <div class="btn">
                     <div class="btn-title">
                         <h2>Fricassée d'escargots</h2>
                     </div> 
                     <div class="btn-text">
                         <p>Au piment d'Espelette</p>
-                        <span>25€</span>
+                        <span class="price">25€</span>
                     </div>
                 </div>
+            </a>
+            <a href="">
                 <div class="btn">
                     <div class="btn-title">
                         <h2>Foie gras de canard mi-cuit</h2>
@@ -54,6 +58,8 @@
                         <span>35€</span>
                     </div>
                 </div>
+            </a>
+            <a href="">
                 <div class="btn">
                     <div class="btn-title">
                         <h2>Oeuf au plat</h2>
@@ -63,9 +69,11 @@
                         <span>20€</span>
                     </div>
                 </div>
-            </section>
-            <section class="plat">
-                <h2>PLATS</h2>
+            </a>    
+        </section>
+        <section class="plat">
+            <h2 class="menu-title">PLATS</h2>
+            <a href="">
                 <div class="btn">
                     <div class="btn-title">
                         <h2>Filet de boeuf aux herbes</h2>
@@ -75,6 +83,8 @@
                         <span>40€</span>
                     </div>
                 </div>
+            </a>   
+            <a href="">
                 <div class="btn">
                     <div class="btn-title">
                         <h2>Parmentier de queue de boeuf</h2>
@@ -84,6 +94,8 @@
                         <span>35€</span>
                     </div>
                 </div>
+            </a>    
+            <a href="">
                 <div class="btn">
                     <div class="btn-title">
                         <h2>Filet de turbot</h2>
@@ -93,9 +105,11 @@
                         <span>44€</span>
                     </div>
                 </div>
-            </section>
-            <section class="dessert">
-                <h2>DESSERTS</h2>
+            </a>
+        </section>
+        <section class="dessert">
+            <h2 class="menu-title">DESSERTS</h2> 
+            <a href="">
                 <div class="btn">
                     <div class="btn-title">
                         <h2>Paris-Brest</h2>
@@ -105,6 +119,8 @@
                         <span>18€</span>
                     </div>
                 </div>
+            </a>
+            <a href="">
                 <div class="btn">
                     <div class="btn-title">
                         <h2>Macaron au chocolat d'exception</h2>
@@ -114,6 +130,8 @@
                         <span>22€</span>
                     </div>
                 </div>
+            </a>
+            <a href="">
                 <div class="btn">
                     <div class="btn-title">
                         <h2>Mousse au chocolat</h2>
@@ -123,32 +141,32 @@
                         <span>23€</span>
                     </div>
                 </div>
-            </section>
-            <div>
-                <button type="button">Commander</button>
-            </div>
-        </div>    
-    </main>
-    <footer>
-        <div class="footer-content">
-            <img src="images/logo/ohmyfood.png" class="footer__logo" alt="">
-            <ul>
-                <li>
-                    <i class="fa-solid fa-utensils"></i>
-                    <a href="">Proposez un restaurant</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <a href="">Proposez un restaurant</a>
-                </li>
-                <li>
-                    <a href="">Mentions légales</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
-            </ul>
-        </div>   
-    </footer>
+            </a>
+        </section>
+        <div>
+            <button type="button" class="command-btn">Commander</button>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <img src="images/logo/ohmyfood.png" class="footer__logo" alt="">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-utensils"></i>
+                        <a href="">Proposez un restaurant</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-handshake-angle"></i>
+                        <a href="">Proposez un restaurant</a>
+                    </li>
+                    <li>
+                        <a href="">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+            </div>   
+        </footer>
+    </main>    
 </body>
 </html>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/style.css">   
 </head>
 <body>
-    <header>
+    <header class="element1">
         <div class="header-content">
             <div class="header__link">
                 <a href="index.html">
@@ -24,15 +24,18 @@
                 <img src="images/logo/ohmyfood.png" class="header__logo" alt="logo-du-site-ohmyfood">
             </div>
         </div> 
-        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="img-restaurant" alt="">
-    </header>
-    <main class="main-page">
         <div>
-            <h1>La palette du goût</h1>
+        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" 
+            class="img-page" alt="image-du-restaurant-a-la-française">
+        </div>    
+    </header>
+    <main class="element2 container">
+        <div class="title-content">
+            <h1 class="page-title">La palette du goût</h1>
             <i class="fa fa-sharp fa-thin fa-heart"></i>
         </div>
         <section class="entree">
-            <h2>ENTREES</h2>
+            <h2 class="menu-title">ENTREES</h2>
             <div class="btn">
                 <div class="btn-title">
                     <h2>Fricassée d'escargots</h2>
@@ -62,7 +65,7 @@
             </div>
         </section>
         <section class="plat">
-            <h2>PLATS</h2>
+            <h2 class="menu-title">PLATS</h2>
             <div class="btn">
                 <div class="btn-title">
                     <h2>Filet de boeuf aux herbes</h2>
@@ -92,7 +95,7 @@
             </div>
         </section>
         <section class="dessert">
-            <h2>DESSERTS</h2>
+            <h2 class="menu-title">DESSERTS</h2>
             <div class="btn">
                 <div class="btn-title">
                     <h2>Paris-Brest</h2>
@@ -122,29 +125,30 @@
             </div>
         </section>
         <div>
-            <button type="button">Commander</button>
+            <button type="button" class="command-btn">Commander</button>
         </div>
+        <footer>
+            <div class="footer-content">
+                <img src="images/logo/ohmyfood.png" class="footer__logo" alt="">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-utensils"></i>
+                        <a href="">Proposez un restaurant</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-handshake-angle"></i>
+                        <a href="">Proposez un restaurant</a>
+                    </li>
+                    <li>
+                        <a href="">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+            </div>    
+        </footer>
     </main>
-    <footer>
-        <div class="footer-content">
-            <img src="images/logo/ohmyfood.png" class="footer__logo" alt="">
-            <ul>
-                <li>
-                    <i class="fa-solid fa-utensils"></i>
-                    <a href="">Proposez un restaurant</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <a href="">Proposez un restaurant</a>
-                </li>
-                <li>
-                    <a href="">Mentions légales</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
-            </ul>
-        </div>    
-    </footer>
+    
 </body>
 </html>
