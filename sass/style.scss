@@ -3,8 +3,7 @@
 @use 'reset'; // Import du fichier _reset.scss
 @use 'resto';
 //@use 'desktop';
-@use 'header';
-@use 'footer';
+
 
 
 * a {
@@ -26,6 +25,34 @@ body {
 
 input {
     border: none;
+}
+                              /*   HEADER  */
+.main-header {
+    .main-header__logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+        .main-header__main-logo {
+            padding: 20px 20px 10px 20px;
+            width: 200px;
+            height: 34px;
+        }
+    .main-header__map-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2px;
+        background-color: darken($color: #F6F6F6, $amount: 6);
+    }
+    .main-header__city {
+            padding: 20px;
+    }
+    
 }
 
                                 /*    SECTION INFO    */
@@ -171,7 +198,7 @@ input {
     font-family: "Font Awesome 6 Free"; /* S'assurer d'utiliser Font Awesome */
     font-weight: 900; /* Basculer sur fa-solid */
     content: '\f004'; /* Code unicode de l'icône fa-heart pleine */
-    color: variables.$purple;
+    color: linear-gradient(#FF79DA, #9356DC);
 }
 
                            /*    fin like  */
@@ -196,18 +223,26 @@ input {
 }
 
 
-.myMain__btn-content {
-    @include mixins.flex-row-justContentSpaceBetween;
-    font-size: 15px;
-    line-height: 20px;
-}
-.myMain__btn {
-    @include mixins.button(white);
-}
+
 /* animation */
 .card__title {
     @include mixins.card-title(black)
 }  
-.myMain__btn-title {
-    @include mixins.card-title(black);
-}       
+
+
+                          /*      FOOTER     */
+
+.footerMain__content  {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    line-height: 30px;
+    margin-top: 0px;
+    .footerMain__logo {
+        width: 150px;
+        filter: invert(100%) brightness(100%);
+    }  
+}
+.footerMain__content a {
+    color: white;
+}
