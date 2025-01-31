@@ -12,133 +12,187 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="styles/style.css">   
 </head>
-<body class="content">
-    <div class="loaderPage">
-        <div class="loaderPage__loader"></div>
+<body>
+    <div class="content__loader">
+        <div class="content__loader-page"></div>
     </div>
-    <div class="myDiv">
-        <header class="bloc1">
-            <div class="bloc1__headerPage">
-                <div class="bloc1__headerPage--backLink">
-                    <a href="index.html">
-                        <i class="fa fa-arrow-left"></i>
+
+    <div>
+        <header class="myHeader bloc1">
+            <div class="myHeader__logoGroup">
+                <div class="myHeader__backLink">
+                    <a href="index.html" class="myHeader__link">
+                        <i class="myHeader__backIcon fa fa-arrow-left"></i>
                     </a>
                 </div>
-                <div class="bloc1__headerPage--logo">
-                    <img src="images/logo/ohmyfood.png" class="header__logo" alt="logo-du-site-ohmyfood">
+                <div class="myHeader__imgLogo">
+                    <img src="images/logo/ohmyfood.png" class="pageLogo" alt="logo-du-site-ohmyfood">
                 </div>
             </div> 
+        </header>
+
+        <main class="leMain">
+
+            <div class="contai bloc2">
+
             <div>
                 <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" 
-                class="imgPage" alt="image-du-restaurant-le-delice-des-sens">
+                class="imgPage1" alt="image-du-restaurant-le-delice-des-sens">
             </div>
-        </header>
-        <main class="bloc2 container">
-            <div class="bloc2__ttleCtent">
-                <h1 class="bloc2__ttleCtent--pageTtle">La palette du goût</h1>
-                <div class="page-like-icon">
-                    <input type="checkbox" id="like" class="hidden-checkbox1">
-                    <label for="like" class="fa-regular fa-heart"></label>
+        
+            <div class="myRsto bloc3">
+                <div class="myRsto__title-group">
+                    <h1 class="myRsto__title">Le délices des sens</h1>
+                    <div class="myRsto__like">
+                        <input type="checkbox" id="like" class="hidden-checkbox1">
+                        <label for="like" class="fa-regular fa-heart"></label>
+                    </div>
+                </div>
+
+                <section class="myRsto__entree">
+                    <h2 class="myRsto__entree-title">ENTREES</h2>
+                
+                    <div class="myMain__btn btn1">
+                        <div class="myMain__btn-title">
+                            <h2>Tartare de thon</h2>
+                        </div> 
+                        <div class="myMain__btn-content">
+                            <p>Assaisonné au yuzu</p>
+                            <span class="myMain__btn-content--price">25€</span>
+                            <div class="myMain__btn-content--icon">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div class="myMain__btn btn1">
+                        <div class="myMain__btn-title">
+                            <h2>Bouchée de homard croustillant</h2>
+                        </div> 
+                        <div class="myMain__btn-content">
+                            <p>Et sa farandole de petits légumes</p>
+                            <span class="myMain__btn-content--price">35€</span>
+                            <div class="myMain__btn-content--icon">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="myMain__btn btn1">
+                        <div class="myMain__btn-title">
+                            <h2>Poulet rôti aux herbes de Provence</h2>
+                        </div> 
+                        <div class="myMain__btn-content">
+                            <p>Et sa crème de truffe</p>
+                            <span class="myMain__btn-content--price">40€</span>
+                            <div class="myMain__btn-content--icon">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="myMain__plat">
+                    <h2 class="myMain__plat-title">PLATS</h2>
+                     
+                    <div class="myMain__btn btn2">
+                        <div class="myMain__btn-title">
+                            <h2>Poulet rôti aux herbes de Provence</h2>
+                        </div> 
+                        <div class="myMain__btn-content">
+                            <p>Et sa crème de truffe</p>
+                            <span class="myMain__btn-content--price">40€</span>
+                            <div class="myMain__btn-content--icon">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    
+                    <div class="myMain__btn btn2">
+                        <div class="myMain__btn-title">
+                            <h2>Langouste rôtie</h2>
+                        </div> 
+                        <div class="myMain__btn-content">
+                            <p>Et ses légumes de saison</p>
+                            <span class="myMain__btn-content--price">35€</span>
+                            <div class="myMain__btn-content--icon">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div class="myMain__btn btn2">
+                        <div class="myMain__btn-title">
+                            <h2>Côte de bœuf Angus</h2>
+                        </div> 
+                        <div class="myMain__btn-content">
+                            <p>Et sa purée de panais</p>
+                            <span class="myMain__btn-content--price">44€</span>
+                            <div class="myMain__btn-content--icon">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                
+                </section>
+                
+                <section class="myMain__dessert">
+                    <h2 class="myMain__dessert-title">DESSERTS</h2>
+                    
+                    <div class="myMain__btn btn3">
+                        <div class="myMain__btn-title">
+                            <h2>Farandole de desserts</h2>
+                        </div> 
+                        <div class="myMain__btn-content">
+                            <p>Du chef</p>
+                            <span class="myMain__btn-content--price">18€</span>
+                            <div class="myMain__btn-content--icon">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="myMain__btn btn3">
+                        <div class="myMain__btn-title">
+                            <h2>Crème brulée</h2>
+                        </div> 
+                        <div class="myMain__btn-content">
+                            <p>Revisitée</p>
+                            <span class="myMain__btn-content--price">22€</span>
+                            <div class="myMain__btn-content--icon">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="myMain__btn btn3">
+                        <div class="myMain__btn-title">
+                            <h2> Tiramisu</h2>
+                        </div> 
+                        <div class="myMain__btn-content">
+                            <p>À la noisette</p>
+                            <span class="myMain__btn-content--price">23€</span>
+                            <div class="myMain__btn-content--icon">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <div class="order-btn">
+                    <button class="orderBtn">Commander</button>
                 </div>
             </div>
-            <section class="entree">
-                <h2 class="entree__menuTtle">ENTREES</h2>
-                <div class="btn">
-                    <div class="btn-title">
-                        <h2>Fricassée d'escargots</h2>
-                    </div> 
-                    <div class="btn-text">
-                        <p>Au piment d'Espelette</p>
-                        <span>25€</span>
-                    </div>
-                </div>
-                <div class="btn btn1">
-                    <div class="btn-title">
-                        <h2>Foie gras de canard mi-cuit</h2>
-                    </div> 
-                    <div class="btn-text">
-                        <p>Et ses copeaux de truffe noire</p>
-                        <span>35€</span>
-                    </div>
-                </div>
-                <div class="btn btn1">
-                    <div class="btn-title">
-                        <h2>Oeuf au plat</h2>
-                    </div> 
-                    <div class="btn-text">
-                        <p>Assaisonné à la truffe sur lit caviar</p>
-                        <span>20€</span>
-                    </div>
-                </div>
-            </section>
-            <section class="plat">
-                <h2 class="menu-title">PLATS</h2>
-                <div class="btn btn2">
-                    <div class="btn-title">
-                        <h2>Filet de boeuf aux herbes</h2>
-                    </div> 
-                    <div class="btn-text">
-                        <p>Accompagné de sa ribambelle de légumes</p>
-                        <span>40€</span>
-                    </div>
-                </div>
-                <div class="btn btn2">
-                    <div class="btn-title">
-                        <h2>Parmentier de queue de boeuf</h2>
-                    </div> 
-                    <div class="btn-text">
-                        <p>A la truffe noire sur sa purée de panais</p>
-                        <span>35€</span>
-                    </div>
-                </div>
-                <div class="btn btn2">
-                    <div class="btn-title">
-                        <h2>Filet de turbot</h2>
-                    </div> 
-                    <div class="btn-text">
-                        <p>Aux agrumes</p>
-                        <span>44€</span>
-                    </div>
-                </div>
-            </section>
-            <section class="dessert">
-                <h2 class="menu-title">DESSERTS</h2>
-                <div class="btn btn3">
-                    <div class="btn-title">
-                        <h2>Paris-Brest</h2>
-                    </div> 
-                    <div class="btn-text">
-                        <p>Revisité</p>
-                        <span>18€</span>
-                    </div>
-                </div>
-                <div class="btn btn3">
-                    <div class="btn-title">
-                        <h2>Macaron au chocolat d'exception</h2>
-                    </div> 
-                    <div class="btn-text">
-                        <p>Et glace à la vanille de Madagascar</p>
-                        <span>22€</span>
-                    </div>
-                </div>
-                <div class="btn btn3">
-                    <div class="btn-title">
-                        <h2>Mousse au chocolat</h2>
-                    </div> 
-                    <div class="btn-text">
-                        <p>Au piment d'Espelette et à la truffe noire</p>
-                        <span>23€</span>
-                    </div>
-                </div>
-            </section>
-            <div class="order-btn">
-                <button class="orderBtn">Commander</button>
-            </div>
-        </main>
+        </main> 
+
         <footer class="footerPage">
-            <div class="footerCtent">
-                <img src="styles/logo/ohmyfood.png" class="footerCtent__footerLogo" alt="">
-                <ul class="footerCtent__footerList">
+            <div class="footerPage__content">
+                <img src="images/logo/ohmyfood.png" class="footerPage__logo" alt="">
+                <ul class="footerPage__list">
                     <li>
                         <i class="fa-solid fa-utensils"></i>
                         <a href="">Proposez un restaurant</a>
@@ -154,8 +208,8 @@
                         <a href="mailto:adresse@email.fr">Contact</a>
                     </li>
                 </ul>
-            </div>   
-        </footer>
-    </div>  
+            </div>    
+        </footer>   
+    </div>
 </body>
 </html>
