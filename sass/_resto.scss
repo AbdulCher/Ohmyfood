@@ -2,7 +2,32 @@
                             /*  Animation page loader */
 /*     Page    */
 
+<<<<<<< HEAD
 
+=======
+.myHeader {  
+    .myHeader__logoGroup {
+        display: flex;
+        flex-direction: row;  
+    }
+    .myHeader__backLink {
+        width: 30px;
+        padding: 20px;
+    } 
+    .myHeader__backIcon {
+        font-size: 17px;
+        padding: -10px;
+    }  
+    .myHeader__imgLogo {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        width: 200px;
+        height: 34px;       
+    }    
+}
+   /* fin header*/
+>>>>>>> c89b7acf6e1686f31ae94dc4654bb30d68dde5c4
 
    /*  leMain    */
 .imgPage1 {
@@ -60,12 +85,20 @@
     justify-content: space-between;
 }
   
+<<<<<<< HEAD
 .myResto {
+=======
+.myRsto {
+>>>>>>> c89b7acf6e1686f31ae94dc4654bb30d68dde5c4
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+<<<<<<< HEAD
     .myResto__title-group {
+=======
+    .myRsto__title-group {
+>>>>>>> c89b7acf6e1686f31ae94dc4654bb30d68dde5c4
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -80,6 +113,82 @@
         width: 12%;
     }
 
+<<<<<<< HEAD
+=======
+}
+.checky {
+    background-color: white;
+    color: #99E2D0;
+    border-radius: 50px;
+    font-size: 30px;
+}
+.zip {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.myMain__btn {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 10px 0px 10px 0px;
+    cursor: pointer; 
+    color: black;
+    overflow: hidden;
+    .myMain__btn-title {
+        font-weight: bolder;
+        font-size: 18px;  
+        color: black;
+    }      
+    .myMain__btn-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 15px;
+        line-height: 20px;
+    } 
+    .myMain__btn-groupPriceIcon {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: -60px;
+        .myMain__btn-group--price {
+            margin-right: 0px;
+            padding-bottom: 10px; 
+            padding-right: 10px; 
+            transform: 2s ease-in-out translateX(-18px) ease-in-out; /* Décalage progressive vers la gauche à cause du nbre négat*/
+            transition: transform 1s linear; /* Durée avant 1s avant un effet fluide*/    
+        } 
+        .myMain__btn-group--icon {
+            position: relative;
+            top: 0px;
+            right: 0px;
+            display: flex;
+            background-color: #99E2D0;
+            border-radius: 0px 10px 10px 0px;
+            padding: 14px 18px 14px 14px; 
+            opacity: 0;
+            transform: translateX(50%); /* Caché dans le bouton */
+            transition: transform 1s linear, opacity 0.2s ease-out;
+        }
+    }
+    
+}
+
+.myMain__btn:hover .myMain__btn-group--icon {
+    transform: translateX(-60px); /* Glisse vers la gauche */
+    opacity: 2;
+    margin-left: 50px; /* Espacement */
+    
+}
+
+.myMain__btn:hover .myMain__btn-group--price {
+    transform: translateX(-30px);
+>>>>>>> c89b7acf6e1686f31ae94dc4654bb30d68dde5c4
 }
 .checky {
     background-color: white;
@@ -209,16 +318,21 @@
     background: linear-gradient(#FF79DA, #9356DC);
     margin: 30px;
     box-shadow: 1px 3px 2px 1px rgba(91, 91, 95, 0.2);
+    margin-left: 0px;
     &:hover {
         opacity: 0.80;
     }
 }
+<<<<<<< HEAD
         /*  bouton commande page */
 .order-btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+=======
+
+>>>>>>> c89b7acf6e1686f31ae94dc4654bb30d68dde5c4
 
 
 li {
@@ -260,5 +374,35 @@ body.content {
 }
 
 
+/* page */
 
+<<<<<<< HEAD
 
+=======
+.footerPage {
+    margin-top: 55rem;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: 3;
+    .footerPage__content {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        line-height: 30px;
+        margin-top: 0px; 
+}
+    .footerPage__logo {
+        width: 150px;
+        filter: invert(100%) brightness(100%);
+    }   
+    .footerPage__list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footerPage__content a {
+    color: white;
+}
+>>>>>>> c89b7acf6e1686f31ae94dc4654bb30d68dde5c4
