@@ -2,28 +2,7 @@
                             /*  Animation page loader */
 /*     Page    */
 
-.myHeader {  
-    .myHeader__logoGroup {
-        display: flex;
-        flex-direction: row;  
-    }
-    .myHeader__backLink {
-        width: 30px;
-        padding: 20px;
-    } 
-    .myHeader__backIcon {
-        font-size: 17px;
-        padding: -10px;
-    }  
-    .myHeader__imgLogo {
-        display: flex;
-        flex-direction: row;
-        padding: 10px;
-        width: 200px;
-        height: 34px;       
-    }    
-}
-   /* fin header*/
+
 
    /*  leMain    */
 .imgPage1 {
@@ -81,12 +60,12 @@
     justify-content: space-between;
 }
   
-.myRsto {
+.myResto {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    .myRsto__title-group {
+    .myResto__title-group {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -164,6 +143,26 @@
     }
     
 }
+/*
+.myMain__image {
+    @include mixins.image;
+    border-radius: 20px 20px 0px 0px;
+}
+.myMain__image {
+    background-color: variables.$light-gray;
+    border-radius: 30px 30px 0px 0px;
+}
+.myMain__like label {
+    font-size: 24px; 
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/*.imgPage1 {
+    aspect-ratio: 9/6;
+    clip-path: inset(180px 0px 0px 0px);
+}*/
 
 .myMain__btn:hover .myMain__btn-group--icon {
     transform: translateX(-60px); /* Glisse vers la gauche */
@@ -175,6 +174,8 @@
 .myMain__btn:hover .myMain__btn-group--price {
     transform: translateX(-30px);
 }
+
+                     /* Animation apparition carte menu */
 .btn1, .btn2, .btn3 {
     opacity: 0; /* Caché au départ */
     transform: translateY(20px); /* Légèrement décalé vers le bas */
@@ -191,26 +192,32 @@
     }
   }
 .btn1 {
-    animation-delay: 2s; /* La première carte apparaît immédiatement */
+    animation-delay: 2s; /* apparition btn1 */
 }
-.btn2:nth-child(1) {
-    animation-delay: 2.4s; /* La première carte apparaît immédiatement */
+.btn2 {
+    animation-delay: 2.4s; /* apparition btn2 */
 }
-.btn3:nth-child(1) {
-    animation-delay: 2.8s; /* La première carte apparaît immédiatement */
+.btn3 {
+    animation-delay: 2.8s; /* apparition btn3 */
 }
-
+                             /*  Fin animation carte menu */
+                             
 .orderBtn { 
     border: transparent;
     padding: 12px 16px;
     border-radius: 50px;
     background: linear-gradient(#FF79DA, #9356DC);
-    margin: 30px 90px;
+    margin: 30px;
     box-shadow: 1px 3px 2px 1px rgba(91, 91, 95, 0.2);
-    margin-left: 0px;
     &:hover {
         opacity: 0.80;
     }
+}
+        /*  bouton commande page */
+.order-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 
@@ -219,11 +226,10 @@ li {
 }
                           /* Animation card page */
 
-/* Contenu principal de la page (caché au départ) */
-.content { /* mon body */
-    display: none; /* Caché tant que le loader est visible */
+.content { 
+    display: none; /*mon body caché tant que loader visible */
 }
-/* Affiche le contenu une fois que le loader disparaît */
+/* Affiche contenu une fois loader disparaît */
 .content__loader {
     animation: fadeOut 3s forwards ease-in-out;
 }
@@ -233,7 +239,7 @@ li {
       opacity: 1; /* Visible au départ */
     }
     100% {
-      opacity: 0; /* Complètement invisible après 3s */
+      opacity: 0; /* invisible après 3s */
       visibility: hidden; /* Retiré de la page après 3s */
     }
 }
@@ -247,41 +253,12 @@ li {
     }
 }
 
-/* Affiche le contenu après 3 secondes */
+/* Affiche contenu après 3 secondes */
 body.content {
     display: block;
     overflow: auto; /* Réactive le scrolling */
 }
 
-.container {
-    margin-bottom: 50px;
-}
 
-/* page */
 
-.footerPage {
-    margin-top: 55rem;
-    width: 100%;
-    display: block;
-    position: absolute;
-    z-index: 3;
-    .footerPage__content {
-        background-color: black;
-        color: white;
-        padding: 20px;
-        line-height: 30px;
-        margin-top: 0px; 
-}
-    .footerPage__logo {
-        width: 150px;
-        filter: invert(100%) brightness(100%);
-    }   
-    .footerPage__list {
-        display: flex;
-        flex-direction: column;
-    }
-}
 
-.footerPage__content a {
-    color: white;
-}

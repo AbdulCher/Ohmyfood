@@ -1,0 +1,119 @@
+/*    Accueil     */
+
+
+@media screen and (min-width: 1024px) {
+    .navi {
+        .navi__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
+        .navi__list-text {
+            padding-right: 60px;
+        }
+    }
+    
+           /*   Main   */
+
+    .theResto {
+        .theResto__group1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+        .theResto__group2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .imgPage1 {
+        clip-path: inset(30% 0 % 0);
+        
+        
+    }
+    .card .card__img {
+        width: 50%;
+        height: 360px;
+    }
+    
+    .card__img {
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+    /*@mixin image {
+        aspect-ratio: 16/9;
+        width: 100%;
+        margin: 0px;
+        object-fit: cover;
+    }*/
+    
+     /*    Page    */
+    
+    .bloc1__headerPage--logo {
+        margin-left: 370px;
+    }     
+    .bloc2 {
+        margin-top: 0px;
+    }
+    .bloc3 {
+        margin-left: 140px;
+        margin-right: 140px;
+    }     
+    .myResto__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .orderBtn {
+       margin-left: 30px;
+   }   
+    li {
+        margin-right: 10px
+   }
+        /*     Foooter  */
+
+.footerPage {
+    margin-top: 54rem;
+    .footers__content {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .footers__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.footerMain {
+    margin-top: 0rem;
+    .footers__content {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .footers__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}     
+    
+.container {
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-top: 200px;
+} 
+   
+}
+
+
+               
+
+

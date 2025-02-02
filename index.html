@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="styles/style.css">   
+    <link rel="stylesheet" href="sass/styles/style.css">   
     
 </head>
 <body class="">
@@ -40,30 +40,30 @@
     <nav class="">
         <div class="navi">
             <h2 class="navi__title">Fonctionnement</h2>
-            <ol class="navi__list-group">
-                <li class="navi__list">
+            <ol class="navi__list">
+                <li class="navi__list-group">
                     <span class="navi__list-number">1</span>
                     <i class="fa fa-mobile-screen-button navi__list-icon"></i>
-                    <span>Choisissez un restaurant</span>
+                    <span class="navi__list-text">Choisissez un restaurant</span>
                 </li>
-                <li class="navi__list">
+                <li class="navi__list-group">
                     <span class="navi__list-number">2</span>
                     <i class="fa-solid fa-list-ul navi__list-icon"></i>
-                    <span>Composez votre menu</span>
+                    <span class="navi__list-text">Composez votre menu</span>
                 </li>
-                <li class="navi__list">
+                <li class="navi__list-group">
                     <span class="navi__list-number">3</span>
                     <i class="fa-solid fa-store navi__list-icon3"></i>
-                    <span>Dégustez au restaurant</span>
+                    <span class="navi__list-text">Dégustez au restaurant</span>
                 </li>
             </ol>
         </div>
     </nav>
     <main>
-        <section class="myResto" id="ancre1">
-            <h2 class="myResto__title">Restaurants</h2>
-            <div class="myResto__content1">
+        <section class="theResto" id="ancre1">
+            <h2 class="theResto__title">Restaurants</h2>
 
+            <div class="theResto__group1">
                 <article class="card">
                     <a href="page1.html" class="card__link">
                         <div class="card__content">
@@ -117,9 +117,7 @@
                 </article>     
             </div> 
 
-            <div class="myResto__content2">
-
-                
+            <div class="theResto__group2">
                 <article class="card">
                     <a href="page3.html" class="card__link">
                         <div class="card__content">
@@ -173,12 +171,12 @@
 
         </section>
     </main>
-    <footer class="footer">
-        <div class="footerMain__content">
+    <footer class="footerMain">
+        <div class="footers__content">
             <div>
-                <img src="images/logo/ohmyfood.png" class="footerMain__logo" alt="logo-du-site-ohmyfood">
+                <img src="images/logo/ohmyfood.png" class="footers__logo" alt="logo-du-site-ohmyfood">
             </div>
-            <ul class="footerMain_list">
+            <ul class="footers__list">
                 <li>
                     <i class="fa-solid fa-utensils"></i>
                     <a href="">Proposez un restaurant</a>
