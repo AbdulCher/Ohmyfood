@@ -1,12 +1,13 @@
-<<<<<<< HEAD
-=======
+
 @use 'mixins';
 @use 'variables';
 @use 'reset'; // Import du fichier _reset.scss
+@use 'header';
+@use 'footer';
+@use 'accueil';
 @use 'resto';
-//@use 'desktop';
 
-
+@use 'desktop';
 
 * a {
     text-decoration: none;
@@ -20,232 +21,44 @@
 body {
     width: 100%px;
     min-width: 360px;
-}
-body {
     font-family: 'Roboto', Arial, sans-serif;
 }
 
 input {
     border: none;
 }
-                              /*   HEADER  */
-.main-header {
-    .main-header__logo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-        .main-header__main-logo {
-            padding: 20px 20px 10px 20px;
-            width: 200px;
-            height: 34px;
-        }
-    .main-header__map-icon {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 2px;
-        background-color: darken($color: #F6F6F6, $amount: 6);
-    }
-    .main-header__city {
-            padding: 20px;
-    }
+                    /*   LOADER   */
+
+.content__loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: variables.$white;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Le loader est au-dessus de tout */
+    animation: fadeOut 3s forwards ease-in-out; /* Disparaît après 3 secondes */
+    /* Style du loader (cercle animé) */
     
 }
-
-                                /*    SECTION INFO    */
-
-
-.info {
-    text-align: center;
-    background-color: variables.$light-gray;
-    .info__title {
-        @include mixins.font-title;
-        padding: 20px 60px 10px 60px;   
-    }
-    .info__text {
-        padding: 0px 50px 20px 20px;
-    }
+.content__loader-page {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #007BFF; /* Bordure bleue */
+    border-top: 5px solid transparent; /* Bordure supérieure transparente */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Rotation infinie */
 }
 
-                                        /*  NAV  */
-
-.navi {
-    margin-bottom: 60px;
-    .navi__title {
-        @include mixins.font-title;
-        padding: 20px 80px 10px 20px;   
-    } 
-    .navi__list-group {
-        cursor: default;
-    }
-    .navi__list {
-        border-radius: 20px;
-        margin: 20px 20px 0px 20px;
-        background-color: variables.$light-gray;
-        transition-property: transform;
-        transition-duration: 100ms;
-        padding: 10px;  
-    }
-    .navi__list-icon {
-        padding: 20px 30px 20px 30px;
-    }
-    .navi__list-icon3 {
-        color: variables.$purple;
-        padding: 20px 30px 20px 30px;
-    }
-    .navi__list-number {
-        margin: -24px;
-        padding: 6px 8px;
-        border-radius: 50px;
-        font-size: x-small;
-        background-color: variables.$purple;
-        color: white;
-    }
+.content { 
+    display: none; /*mon body caché tant que loader visible */
 }
-    
-
-
-    
-                                 /*    MAIN      */
-
-
-.myResto {
-    background-color: variables.$light-gray;
-    .myResto__content1 {
-        @include mixins.flex-column-justContentSpaceBetween;
-        width: 100%;
-        height: 100%;
-    }
-    .myResto__title {
-        @include mixins.font-title;
-        margin-left: 20px;
-    }
-    .myResto__content2 {
-        @include mixins.flex-column-justContentSpaceBetween;
-        width: 100%;
-        height: 100%;
-    }   
-}
-
-.card {
-    box-sizing: border-box;
-    background-color: white;
-    border-radius: 20px;
-    margin: 20px;
-    display: flex;     
-    .card__image-band {
-        position: relative; 
-    }
-    .card__img {
-        @include mixins.image;
-        border-radius: 20px 20px 0px 0px; 
-    }
-    .card__badge {
-        position: absolute;
-        top: 10%;
-        left: 72%;
-        padding: 6px 10px;
-        background-color: variables.$light-green;
-    }   
-    .card__info {
-        @include mixins.flex-column;
-        padding: 10px 10px;
-    }
-    .card__title {
-        @include mixins.flex-row;
-        justify-content: space-between;   
-    }
-    .card__like label {
-        font-size: 24px; 
-        color: black;
-        cursor: pointer;
-        transition: color 0.3s ease;
-    }
-    .card__like {
-        display: flex;
-        justify-content: flex-end;
-        align-items: start;
-        margin-top: -20px;
-    }
+/* Affiche contenu une fois loader disparaît */
+.content__loader {
+    animation: fadeOut 3s forwards ease-in-out;
 }
 
 
-                               /*  like  */
-.hidden-checkbox {
-    display: none; /* Cache la case à cocher */
-}
-.hidden-checkbox:checked + label {
-    font-family: "Font Awesome 6 Free"; /* S'assurer d'utiliser Font Awesome */
-    font-weight: 900; /* Basculer sur fa-solid */
-    content: '\f004'; /* Code unicode de l'icône fa-heart pleine */
-    color: variables.$purple;
-}
-.hidden-checkbox1 {
-    display: none; /* Cache la case à cocher */
-}
-.myMain__like label {
-    font-size: 24px; 
-    color: black;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-
-.hidden-checkbox1:checked + label {
-    font-family: "Font Awesome 6 Free"; /* S'assurer d'utiliser Font Awesome */
-    font-weight: 900; /* Basculer sur fa-solid */
-    content: '\f004'; /* Code unicode de l'icône fa-heart pleine */
-    color: linear-gradient(#FF79DA, #9356DC);
-}
-
-                           /*    fin like  */
-
-.myMain__image {
-    @include mixins.image;
-    border-radius: 20px 20px 0px 0px;
-}
-
-
-
-
-                          /*     MAIN       */
-.myMain__image {
-    background-color: variables.$light-gray;
-    border-radius: 30px 30px 0px 0px;
-}
-.container {
-    background-color: variables.$light-gray;
-    padding: 10px;
-    
-}
-
-
-
-/* animation */
-.card__title {
-    @include mixins.card-title(black)
-}  
-
-
-                          /*      FOOTER     */
-
-.footerMain__content  {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    line-height: 30px;
-    margin-top: 0px;
-    .footerMain__logo {
-        width: 150px;
-        filter: invert(100%) brightness(100%);
-    }  
-}
-.footerMain__content a {
-    color: white;
-}
->>>>>>> c89b7acf6e1686f31ae94dc4654bb30d68dde5c4

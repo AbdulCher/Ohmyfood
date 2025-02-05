@@ -1,33 +1,7 @@
-@use 'bases/mixins';
-@use 'bases/variables';
-@use 'bases/reset'; // Import du fichier _reset.scss
-@use 'pages/resto';
-@use 'layouts/footer';
-@use 'layouts/header';
-@use 'pages/desktop';
-
-* a {
-    text-decoration: none;
-    color: #000;
-}
-*,
-*::before
-*::after {
-    box-sizing: border-box;
-}
-body {
-    width: 100%px;
-    min-width: 360px;
-    font-family: 'Roboto', Arial, sans-serif;
-}
-
-input {
-    border: none;
-}
-
-
-                                /*    SECTION INFO    */
-
+@use 'mixins';
+@use 'variables';
+                         /*   PAGE d'accueil  */
+                        /*    SECTION INFO    */
 
 .info {
     text-align: center;
@@ -60,6 +34,7 @@ input {
     }
     .navi__list-icon {
         padding: 20px 30px 20px 30px;
+        color: gray;
     }
     .navi__list-icon3 {
         color: variables.$purple;
@@ -77,7 +52,6 @@ input {
                                  /*    MAIN      */
 
 .theResto {
-
     background-color: variables.$light-gray;
     .theResto__title {
         @include mixins.font-title;
@@ -85,36 +59,34 @@ input {
         padding-top: 50px
     }
     .theResto__content1 {
-        @include mixins.flex-column-justContentSpaceBetween;
+        @include mixins.flex-column;
+        justify-content: space-between;
         width: 100%;
         height: 100%;
     }
     .theResto__content2 {
-        @include mixins.flex-column-justContentSpaceBetween;
+        @include mixins.flex-column;
+        justify-content: space-between;
         width: 100%;
         height: 100%;
     }   
 }
-.card .card__img {
-    height: 300px;
-    /*aspect-ratio: 9/6;
-    clip-path: inset(0px 0px 0px 0px);
-*/
+.card .card__image {
+    height: 10px;
+    width: 100%;
+    object-fit: cover;
 }
 .card {
-    box-sizing: border-box;
     background-color: white;
-    border-radius: 20px;
     margin: 20px;
-    display: flex;     
+    border-radius: 20px;
     .card__image-band {
         position: relative; 
     }
-    .card__img {
-        
-        aspect-ratio: 16/8;
+    .card__image {
+        aspect-ratio: 16/9;
         width: 100%;
-        margin: 0px;
+        height: auto;
         object-fit: cover;
         border-radius: 20px 20px 0px 0px; 
     }
@@ -123,6 +95,7 @@ input {
         top: 10%;
         left: 72%;
         padding: 6px 10px;
+        color: green;
         background-color: variables.$light-green;
     }   
     .card__info {
@@ -147,62 +120,21 @@ input {
         margin-top: -20px;
     }
 }
-                               /*  like  */
+                               /*  ICON Like */
 .hidden-checkbox {
     display: none; /* Cache la case à cocher */
 }
 .hidden-checkbox:checked + label {
-    font-family: "Font Awesome 6 Free"; /* S'assurer d'utiliser Font Awesome */
+    font-family: "Font Awesome 6 Free"; /* Font Awesome */
     font-weight: 900; /* Basculer sur fa-solid */
-    content: '\f004'; /* Code unicode de l'icône fa-heart pleine */
-    color: variables.$purple;
-}
-.hidden-checkbox1 {
-    display: none; /* Cache la case à cocher */
-}
-.hidden-checkbox1:checked + label {
-    font-family: "Font Awesome 6 Free"; /* S'assurer d'utiliser Font Awesome */
-    font-weight: 900; /* Basculer sur fa-solid */
-    content: '\f004'; /* Code unicode de l'icône fa-heart pleine */
-    color: linear-gradient(#FF79DA, #9356DC);
+    content: '\f004'; /* Code unicode icône fa-heart pleine */
+    background-clip: text;
+    color: transparent;
+    background: linear-gradient(175deg, #ff79da, #9356dc); 
+
 }
 
-                          /*     MAIN       */
-.myMain__image {
-    @include mixins.image;
-    border-radius: 20px 20px 0px 0px;
-}
-.myMain__image {
-    background-color: variables.$light-gray;
-    border-radius: 30px 30px 0px 0px;
-}
-.container {
-    background-color: variables.$light-gray;
-    padding: 10px;
-    
-}
-
-
-
-/* animation */
-.card__title {
-    @include mixins.card-title(black)
-}  
-
-
+/*   <i class="fa-solid fa-heart heart__full"></i>
+<i class="fa-regular fa-heart heart__empty"></i> */
                           /*      FOOTER     */
 
-.footerMain__content  {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    line-height: 30px;
-    margin-top: 0px;
-    .footerMain__logo {
-        width: 150px;
-        filter: invert(100%) brightness(100%);
-    }  
-}
-.footerMain__content a {
-    color: white;
-}

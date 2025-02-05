@@ -11,7 +11,7 @@
     color: $color;
 }
 @mixin image {
-    aspect-ratio: 16/9;
+    /*aspect-ratio: 16/9;*/
     width: 100%;
     margin: 0px;
     object-fit: cover;
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: row;
 }
-@mixin flex-row-justContentSpaceBetween {
+@mixin flex-row-justSpaceBetween {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -37,8 +37,15 @@
     display: flex;
     flex-direction: column;
 }
-@mixin flex-column-justContentSpaceBetween {
+@mixin flex-column-justSpaceBetween {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+@mixin footContent {
+    background-color: #353535;
+    color: white;
+    padding: 20px;
+    line-height: 30px;
+    margin-top: 0px;
 }

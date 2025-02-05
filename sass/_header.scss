@@ -1,8 +1,11 @@
-                              /*   HEADER Index */
+@use 'mixins';
+@use 'variables';
+
+               /*   HEADER ACCUEIL   */
+
 .main-header {
     .main-header__logo {
-        display: flex;
-        flex-direction: column;
+        @include mixins.flex-column;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -13,13 +16,12 @@
             height: 34px;
         }
     .main-header__map-icon {
-        display: flex;
-        flex-direction: row;
+        @include mixins.flex-row;
         justify-content: center;
         align-items: center;
         width: 100%;
         padding: 2px;
-        background-color: darken($color: #F6F6F6, $amount: 6);
+        background-color: #e5e2e2;
     }
     .main-header__city {
             padding: 20px;
@@ -27,27 +29,29 @@
     
 }
 
-                    /*   HEADER Page */
+                                /*   HEADER Page */
 
 .myHeader {  
-    .myHeader__logoGroup {
-        display: flex;
-        flex-direction: row;  
+    @include mixins.flex-row;
+   
+    .myHeader__iconGroup {
+        @include mixins.flex-row;  
     }
     .myHeader__backLink {
         width: 30px;
-        padding: 20px;
+        padding-top: 20px;
+        margin-left: 20px;
     } 
     .myHeader__backIcon {
         font-size: 17px;
-        padding: -10px;
+        
     }  
     .myHeader__imgLogo {
-        display: flex;
-        flex-direction: row;
+        @include mixins.flex-row;
+        @include mixins.logo-size;
         padding: 10px;
-        width: 200px;
-        height: 34px;       
+        margin: auto;     
+        padding-right: 60px;
     }    
 }
-   /* fin header*/
+

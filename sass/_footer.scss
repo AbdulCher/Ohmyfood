@@ -1,45 +1,39 @@
-                         /*      FOOTER Index  */
+@use 'mixins';
 
-.footers__content  {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    line-height: 30px;
-    margin-top: 0px;
+/*      FOOTER Index  */
+
+.footerMain {
+    .footers__content  {
+        @include mixins.footContent;
+    }
     .footers__logo {
         width: 150px;
         filter: invert(100%) brightness(100%);
     }  
-}
-.footers__content a {
-    color: white;
+    .footers__content a {
+        color: white;
+    } 
 }
 
                         /*   FOOTER Page   */
 
 .footerPage {
-    margin-top: 55rem;
+    margin-top: 48rem;
     width: 100%;
     display: block;
     position: absolute;
     z-index: 3;
     .footers__content {
-        background-color: black;
-        color: white;
-        padding: 20px;
-        line-height: 30px;
-        margin-top: 0px; 
+        @include mixins.footContent;    
 }
     .footers__logo {
         width: 150px;
         filter: invert(100%) brightness(100%);
     }   
     .footers__list {
-        display: flex;
-        flex-direction: column;
+        @include mixins.flex-column;
     }
 }
-
 .footers__content a {
     color: white;
 }

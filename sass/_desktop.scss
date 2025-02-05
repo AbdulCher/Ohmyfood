@@ -1,0 +1,125 @@
+/*    Accueil     */
+
+@media screen and (min-width: 1024px) {
+    .main-header__logo {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .myHeader {
+        .myHeader__logoGroup {
+            display: flex;
+            flex-direction: row;   
+        }
+        .myHeader__imgLogo {
+           padding-left: 30px;
+        }
+    }
+    .myResto {
+        .myResto__title-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;   
+        }
+        .myResto__title {
+            margin-right: 20px;
+        }
+    }
+        
+    
+    .navi {
+        .navi__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
+        .navi__list-text {
+            padding-right: 50px;
+        }
+    }
+    
+           /*   Main   */
+
+    .theResto {
+        .theResto__group1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+        .theResto__group2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .card {
+        width: 100%;
+    }
+    /*
+    .imgPage {
+        clip-path: inset(30% 0 % 0);
+    }*/
+    
+     /*    Page    */
+    
+    .bloc1__headerPage--logo {
+        margin-left: 370px;
+    }     
+    .bloc2 {
+        margin-top: 0px;
+    }
+    .bloc3 {
+        margin-left: 140px;
+        margin-right: 140px;
+    }     
+    
+    .orderBtn {
+       margin-left: 30px;
+   }   
+    li {
+        margin-right: 10px
+   }
+        /*     Foooter  */
+
+.footerPage {
+    margin-top: 54rem;
+    .footers__content {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .footers__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.footerMain {
+    margin-top: 0rem;
+    .footers__content {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .footers__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}     
+    
+.container {
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-top: 200px;
+} 
+   
+}
+
+
+               
+
+
