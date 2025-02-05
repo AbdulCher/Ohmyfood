@@ -1,12 +1,12 @@
-
 @use 'mixins';
 @use 'variables';
 @use 'reset'; // Import du fichier _reset.scss
+
 @use 'header';
 @use 'footer';
+
 @use 'accueil';
 @use 'resto';
-
 @use 'desktop';
 
 * a {
@@ -42,7 +42,6 @@ input {
     z-index: 9999; /* Le loader est au-dessus de tout */
     animation: fadeOut 3s forwards ease-in-out; /* Disparaît après 3 secondes */
     /* Style du loader (cercle animé) */
-    
 }
 .content__loader-page {
     width: 50px;

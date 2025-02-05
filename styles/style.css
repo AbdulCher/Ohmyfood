@@ -120,7 +120,7 @@ table {
 
 /*   FOOTER Page   */
 .footerPage {
-  margin-top: 48rem;
+  margin-top: 54rem;
   width: 100%;
   display: block;
   position: absolute;
@@ -174,28 +174,28 @@ table {
   cursor: default;
 }
 .navi .navi__list-group {
-  border-radius: 20px;
+  border-radius: 24px;
   margin: 20px 20px 0px 20px;
   background-color: #F3F3F3;
   transition-property: transform;
   transition-duration: 100ms;
-  padding: 10px;
+  padding: 10px 30px 10px 10px;
 }
-.navi .navi__list-icon {
-  padding: 20px 30px 20px 30px;
-  color: gray;
-}
-.navi .navi__list-icon3 {
-  color: #9356DC;
-  padding: 20px 30px 20px 30px;
-}
-.navi .navi__list-number {
+.navi .navi__list-group .navi__list--number {
   margin: -24px;
   padding: 6px 8px;
   border-radius: 50px;
   font-size: x-small;
   background-color: #9356DC;
   color: white;
+}
+.navi .navi__list-group .navi__list--icon {
+  padding: 20px 30px 20px 30px;
+  color: gray;
+}
+.navi .navi__list-group .navi__list--icon3 {
+  color: #9356DC;
+  padding: 20px 30px 20px 30px;
 }
 
 /*    MAIN      */
@@ -234,17 +234,17 @@ table {
   margin: 20px;
   border-radius: 20px;
 }
-.card .card__image-band {
+.card .card__imageBand {
   position: relative;
 }
-.card .card__image {
+.card .card__imageBand .card__imageBand--image {
   aspect-ratio: 16/9;
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-.card .card__badge {
+.card .card__imageBand .card__imageBand--badge {
   position: absolute;
   top: 10%;
   left: 72%;
@@ -257,7 +257,7 @@ table {
   flex-direction: column;
   padding: 10px 10px;
 }
-.card .card__title {
+.card .card__info .card__info--title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -265,17 +265,17 @@ table {
   font-size: 18px;
   color: black;
 }
-.card .card__like label {
-  font-size: 24px;
-  color: black;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-.card .card__like {
+.card .card__info .card__info--like {
   display: flex;
   justify-content: flex-end;
   align-items: start;
   margin-top: -20px;
+}
+.card .card__info .card__info--like label {
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 /*  ICON Like */
@@ -283,13 +283,22 @@ table {
   display: none; /* Cache la case à cocher */
 }
 
-.hidden-checkbox:checked + label {
+/* Icône par défaut (vide) */
+.hidden-checkbox + label {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Changement de l'icône lorsqu'elle est cochée */
+.hidden-checkbox:checked + label::before {
   font-family: "Font Awesome 6 Free"; /* Font Awesome */
-  font-weight: 900; /* Basculer sur fa-solid */
-  content: "\f004"; /* Code unicode icône fa-heart pleine */
-  background-clip: text;
-  color: transparent;
+  font-weight: 900; /* Passe en fa-solid */
+  content: "\f004"; /* Code unicode pour le cœur plein */
   background: linear-gradient(175deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
 
 /*   <i class="fa-solid fa-heart heart__full"></i>
@@ -370,7 +379,7 @@ body .bloc3 {
   background-color: #FFFFFF;
   border-radius: 15px;
   padding: 0px;
-  margin: 10px 0px 10px 0px;
+  margin: 10px -12px 10px -12px;
   cursor: pointer;
   color: black;
   overflow: hidden;
@@ -488,8 +497,9 @@ body .bloc3 {
 /*  BOUTON de commande */
 .orderBtn, .orderBtnPage {
   border: transparent;
-  padding: 12px 26px;
+  padding: 16px 26px;
   border-radius: 50px;
+  color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   margin: 30px;
   box-shadow: 1px 3px 2px 1px rgba(91, 91, 95, 0.2);
@@ -604,7 +614,7 @@ body.content {
     margin-left: 30px;
   }
   li {
-    margin-right: 10px;
+    margin-right: 20px;
   }
   /*     Foooter  */
   .footerPage {

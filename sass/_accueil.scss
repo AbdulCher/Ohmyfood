@@ -25,30 +25,31 @@
         cursor: default;
     }
     .navi__list-group {
-        border-radius: 20px;
+        border-radius: 24px;
         margin: 20px 20px 0px 20px;
         background-color: variables.$light-gray;
         transition-property: transform;
         transition-duration: 100ms;
-        padding: 10px;  
-    }
-    .navi__list-icon {
-        padding: 20px 30px 20px 30px;
-        color: gray;
-    }
-    .navi__list-icon3 {
-        color: variables.$purple;
-        padding: 20px 30px 20px 30px;
-    }
-    .navi__list-number {
-        margin: -24px;
-        padding: 6px 8px;
-        border-radius: 50px;
-        font-size: x-small;
-        background-color: variables.$purple;
-        color: white;
-    }
-}     
+        padding: 10px 30px 10px 10px;  
+        .navi__list--number {
+            margin: -24px;
+            padding: 6px 8px;
+            border-radius: 50px;
+            font-size: x-small;
+            background-color: variables.$purple;
+            color: white;
+        }
+        .navi__list--icon {
+            padding: 20px 30px 20px 30px;
+            color: gray;
+        }
+        .navi__list--icon3 {
+            color: variables.$purple;
+            padding: 20px 30px 20px 30px;
+        }
+    } 
+}
+    
                                  /*    MAIN      */
 
 .theResto {
@@ -80,59 +81,70 @@
     background-color: white;
     margin: 20px;
     border-radius: 20px;
-    .card__image-band {
+    .card__imageBand {
         position: relative; 
+        .card__imageBand--image {
+            aspect-ratio: 16/9;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 20px 20px 0px 0px; 
+        }
+        .card__imageBand--badge {
+            position: absolute;
+            top: 10%;
+            left: 72%;
+            padding: 6px 10px;
+            color: green;
+            background-color: variables.$light-green;
+        }   
     }
-    .card__image {
-        aspect-ratio: 16/9;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 20px 20px 0px 0px; 
-    }
-    .card__badge {
-        position: absolute;
-        top: 10%;
-        left: 72%;
-        padding: 6px 10px;
-        color: green;
-        background-color: variables.$light-green;
-    }   
     .card__info {
         @include mixins.flex-column;
         padding: 10px 10px;
-    }
-    .card__title {
-        @include mixins.flex-row;
-        justify-content: space-between;  
-        @include mixins.card-title(black) 
-    }
-    .card__like label {
-        font-size: 24px; 
-        color: black;
-        cursor: pointer;
-        transition: color 0.3s ease;
-    }
-    .card__like {
-        display: flex;
-        justify-content: flex-end;
-        align-items: start;
-        margin-top: -20px;
-    }
+        .card__info--title {
+            @include mixins.flex-row;
+            justify-content: space-between;  
+            @include mixins.card-title(black) 
+        }
+        .card__info--like {
+            display: flex;
+            justify-content: flex-end;
+            align-items: start;
+            margin-top: -20px;
+        }
+        .card__info--like label {
+            font-size: 24px; 
+            color: black;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+    }  
 }
                                /*  ICON Like */
+                               
 .hidden-checkbox {
     display: none; /* Cache la case à cocher */
 }
-.hidden-checkbox:checked + label {
-    font-family: "Font Awesome 6 Free"; /* Font Awesome */
-    font-weight: 900; /* Basculer sur fa-solid */
-    content: '\f004'; /* Code unicode icône fa-heart pleine */
-    background-clip: text;
-    color: transparent;
-    background: linear-gradient(175deg, #ff79da, #9356dc); 
 
+/* Icône par défaut (vide) */
+.hidden-checkbox + label {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
 }
+
+/* Changement de l'icône lorsqu'elle est cochée */
+.hidden-checkbox:checked + label::before {
+    font-family: "Font Awesome 6 Free"; /* Font Awesome */
+    font-weight: 900; /* Passe en fa-solid */
+    content: '\f004'; /* Code unicode pour le cœur plein */
+    background: linear-gradient(175deg, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
 
 /*   <i class="fa-solid fa-heart heart__full"></i>
 <i class="fa-regular fa-heart heart__empty"></i> */
