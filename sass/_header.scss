@@ -1,7 +1,7 @@
 @use 'mixins';
 @use 'variables';
 
-               /*   HEADER ACCUEIL   */
+               /*   HEADER page accueil   */
 
 .main-header {
     .main-header__logo {
@@ -29,7 +29,7 @@
     
 }
 
-                                /*   HEADER Page */
+                    /*   HEADER page menu */
 
 .myHeader {  
     @include mixins.flex-row;

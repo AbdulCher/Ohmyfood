@@ -6,7 +6,7 @@
 @use 'footer';
 
 @use 'accueil';
-@use 'resto';
+@use 'menus';
 @use 'desktop';
 
 * a {
@@ -19,7 +19,7 @@
     box-sizing: border-box;
 }
 body {
-    width: 100%px;
+    
     min-width: 360px;
     font-family: 'Roboto', Arial, sans-serif;
 }

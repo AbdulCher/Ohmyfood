@@ -1,8 +1,8 @@
 @use 'mixins';
 @use 'variables';
-                         /*   PAGE d'accueil  */
-                        /*    SECTION INFO    */
 
+                /*   PAGE d'accueil / Section info */
+ 
 .info {
     text-align: center;
     background-color: variables.$light-gray;
@@ -13,8 +13,12 @@
     .info__text {
         padding: 0px 50px 20px 20px;
     }
+    .info__main-btn {
+       padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
-                                        /*  NAV  */
+                            /*  Nav  */
 .navi {
     margin-bottom: 60px;
     .navi__title {
@@ -48,10 +52,8 @@
             padding: 20px 30px 20px 30px;
         }
     } 
-}
-    
-                                 /*    MAIN      */
-
+} 
+                        /*    Main      */
 .theResto {
     background-color: variables.$light-gray;
     .theResto__title {
@@ -101,27 +103,34 @@
     }
     .card__info {
         @include mixins.flex-column;
-        padding: 10px 10px;
+        padding: 10px 10px 38px 10px;
         .card__info--title {
             @include mixins.flex-row;
-            justify-content: space-between;  
+            justify-content: space-between;
+            padding-bottom: 4px;  
             @include mixins.card-title(black) 
         }
-        .card__info--like {
-            display: flex;
-            justify-content: flex-end;
-            align-items: start;
-            margin-top: -20px;
-        }
-        .card__info--like label {
-            font-size: 24px; 
-            color: black;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
+        
     }  
+    .card__like {
+        display: flex;
+        justify-content: flex-end;
+        
+        margin-top: -70px;
+        padding-bottom: 26px;
+        padding-right: 8px;
+        font-weight: lighter;
+        
+    }
+    .card__like label {
+        font-size: 24px; 
+        color: black;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
 }
-                               /*  ICON Like */
+
+                        /*  ICON Like */
                                
 .hidden-checkbox {
     display: none; /* Cache la case à cocher */
@@ -134,7 +143,7 @@
     transition: color 0.3s ease-in-out;
 }
 
-/* Changement de l'icône lorsqu'elle est cochée */
+/* Icône cochée (pleine) */
 .hidden-checkbox:checked + label::before {
     font-family: "Font Awesome 6 Free"; /* Font Awesome */
     font-weight: 900; /* Passe en fa-solid */
@@ -144,9 +153,3 @@
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
 }
-
-
-/*   <i class="fa-solid fa-heart heart__full"></i>
-<i class="fa-regular fa-heart heart__empty"></i> */
-                          /*      FOOTER     */
-

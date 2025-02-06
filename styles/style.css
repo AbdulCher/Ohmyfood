@@ -49,7 +49,7 @@ table {
   border-spacing: 0;
 }
 
-/*   HEADER ACCUEIL   */
+/*   HEADER page accueil   */
 .main-header .main-header__logo {
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@ table {
   padding: 20px;
 }
 
-/*   HEADER Page */
+/*   HEADER page menu */
 .myHeader {
   display: flex;
   flex-direction: row;
@@ -146,8 +146,7 @@ table {
   color: white;
 }
 
-/*   PAGE d'accueil  */
-/*    SECTION INFO    */
+/*   PAGE d'accueil / Section info */
 .info {
   text-align: center;
   background-color: #F3F3F3;
@@ -160,8 +159,12 @@ table {
 .info .info__text {
   padding: 0px 50px 20px 20px;
 }
+.info .info__main-btn {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
-/*  NAV  */
+/*  Nav  */
 .navi {
   margin-bottom: 60px;
 }
@@ -198,7 +201,7 @@ table {
   padding: 20px 30px 20px 30px;
 }
 
-/*    MAIN      */
+/*    Main      */
 .theResto {
   background-color: #F3F3F3;
 }
@@ -255,23 +258,26 @@ table {
 .card .card__info {
   display: flex;
   flex-direction: column;
-  padding: 10px 10px;
+  padding: 10px 10px 38px 10px;
 }
 .card .card__info .card__info--title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 4px;
   font-weight: bolder;
   font-size: 18px;
   color: black;
 }
-.card .card__info .card__info--like {
+.card .card__like {
   display: flex;
   justify-content: flex-end;
-  align-items: start;
-  margin-top: -20px;
+  margin-top: -70px;
+  padding-bottom: 26px;
+  padding-right: 8px;
+  font-weight: lighter;
 }
-.card .card__info .card__info--like label {
+.card .card__like label {
   font-size: 24px;
   color: black;
   cursor: pointer;
@@ -290,7 +296,7 @@ table {
   transition: color 0.3s ease-in-out;
 }
 
-/* Changement de l'icône lorsqu'elle est cochée */
+/* Icône cochée (pleine) */
 .hidden-checkbox:checked + label::before {
   font-family: "Font Awesome 6 Free"; /* Font Awesome */
   font-weight: 900; /* Passe en fa-solid */
@@ -301,9 +307,6 @@ table {
   transition: all 0.3s ease-in-out;
 }
 
-/*   <i class="fa-solid fa-heart heart__full"></i>
-<i class="fa-regular fa-heart heart__empty"></i> */
-/*      FOOTER     */
 /* IMAGE Page menu*/
 .imageMyResto .imageMyResto__page1 {
   aspect-ratio: 16/8;
@@ -389,15 +392,6 @@ body .bloc3 {
   padding-left: 10px;
   padding-bottom: 10px;
   flex-grow: 1; /* Permet au texte de s’adapter */
-  /*min-width: 0; /* Empêche le texte de forcer un dépassement */
-  /* fin difference sauv*/
-  /*.menuBtn__text {
-      max-width: 300px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-
-  }*/
 }
 .menuBtn .menuBtn__text .menuBtn__text--title {
   font-weight: bolder;
@@ -411,23 +405,20 @@ body .bloc3 {
   font-size: 15px;
   line-height: 20px;
 }
-
-.menuBtn__groupPriceIcon {
+.menuBtn .menuBtn__groupPriceIcon {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
   margin-right: 0px;
-  /* diff sauv margin-right: -6Opx;*/
 }
-.menuBtn__groupPriceIcon .menuBtn__group--price {
+.menuBtn .menuBtn__groupPriceIcon .menuBtn__group--price {
   margin-right: 0px;
   padding-bottom: 10px;
   padding-right: 16px;
-  /*transform: 2s ease-in-out translateX(-18px) ease-in-out; /* Décalage progressive vers la gauche à cause du nbre négat*/
-  transition: transform 1s linear; /* Durée avant 1s avant un effet fluide*/
+  transition: transform 1s linear; /* Durée 1s avant un effet fluide*/
 }
-.menuBtn__groupPriceIcon .menuBtn__group--icon {
+.menuBtn .menuBtn__groupPriceIcon .menuBtn__group--icon {
   position: absolute;
   top: 0px;
   margin-right: -66px;
@@ -435,24 +426,23 @@ body .bloc3 {
   border-radius: 0px 10px 10px 0px;
   padding: 10px 30px 14px 10px; /* augmente taille Btn*/
   font-size: 34px;
-  opacity: 0;
+  opacity: 1; /* opacity du btn icon aller-retour de transition*/
   transition: transform 1s linear, opacity 0.2s ease-out;
 }
-.menuBtn__groupPriceIcon .menuBtn__group--check {
+.menuBtn .menuBtn__groupPriceIcon .menuBtn__group--check {
   background-color: white;
   color: #99E2D0;
   border-radius: 50px;
   font-size: 24px;
 }
 
-/* Active text-overflow SEULEMENT au survol */
+/* Animation avec text-overflow */
 .menuBtn:hover .menuBtn__text--title h2,
 .menuBtn:hover .menuBtn__text--content p {
   white-space: nowrap; /* Empêche le retour à la ligne */
   overflow: hidden; /* Cache le texte dépassant */
   text-overflow: ellipsis; /* Ajoute les "..." */
   width: calc(100% - 50px); /* Ajuste la largeur pour éviter le décalage */
-  transform: translateX();
 }
 
 .menuBtn:hover .menuBtn__group--icon {
@@ -658,7 +648,6 @@ body.content {
 }
 
 body {
-  width: 100% px;
   min-width: 360px;
   font-family: "Roboto", Arial, sans-serif;
 }

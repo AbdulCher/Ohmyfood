@@ -64,7 +64,6 @@ body {
     }
 }
 
-
 .menuBtn {
     position: relative;
     @include mixins.flex-row-justSpaceBetween;
@@ -80,16 +79,6 @@ body {
         padding-left: 10px;
         padding-bottom: 10px;
         flex-grow: 1; /* Permet au texte de s’adapter */
-        /*min-width: 0; /* Empêche le texte de forcer un dépassement */
-       /* fin difference sauv*/
-       
-        /*.menuBtn__text {
-        max-width: 300px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-
-    }*/
         .menuBtn__text--title {
             font-weight: bolder;
             font-size: 18px;  
@@ -101,21 +90,17 @@ body {
             line-height: 20px;
         } 
     }
-}  
     .menuBtn__groupPriceIcon {
         @include mixins.flex-row;
         justify-content: flex-end;
         align-items: flex-end;
         margin-right: 0px;
-        /* diff sauv margin-right: -6Opx;*/
         .menuBtn__group--price {
             margin-right: 0px;
             padding-bottom: 10px; 
-            padding-right: /*10px*/ 16px; 
-            /*transform: 2s ease-in-out translateX(-18px) ease-in-out; /* Décalage progressive vers la gauche à cause du nbre négat*/
-            transition: transform 1s linear; /* Durée avant 1s avant un effet fluide*/    
+            padding-right: 16px; 
+            transition: transform 1s linear; /* Durée 1s avant un effet fluide*/    
         } 
-    
         .menuBtn__group--icon {
             position: absolute;
             top: 0px;
@@ -124,7 +109,7 @@ body {
             border-radius: 0px 10px 10px 0px;
             padding: 10px 30px 14px 10px; /* augmente taille Btn*/
             font-size: 34px;
-            opacity: 0;
+            opacity: 1; /* opacity du btn icon aller-retour de transition*/
             transition: transform 1s linear, opacity 0.2s ease-out;
         }
         .menuBtn__group--check {
@@ -134,10 +119,9 @@ body {
             font-size: 24px;
         }
     }  
+}  
 
-
-
-                        /* Active text-overflow SEULEMENT au survol */
+                        /* Animation avec text-overflow */
 
 .menuBtn:hover .menuBtn__text--title h2,
 .menuBtn:hover .menuBtn__text--content p {
@@ -145,7 +129,6 @@ body {
     overflow: hidden; /* Cache le texte dépassant */
     text-overflow: ellipsis; /* Ajoute les "..." */
     width: calc(100% - 50px); /* Ajuste la largeur pour éviter le décalage */
-    transform: translateX();
 }
 .menuBtn:hover .menuBtn__group--icon {
     transform: translateX(-60px); /* Glisse vers la gauche */
@@ -153,8 +136,7 @@ body {
     margin-left: 30px; /* Espacement */ 
 }
 .menuBtn:hover .menuBtn__group--price {
-    transform: translateX(-50px);
-    
+    transform: translateX(-50px);   
 }
 
                      /* Animation apparition carte menu */
@@ -207,13 +189,10 @@ body {
     justify-content: center;
 }
 
-
 li {
     margin-right: 0px;
 }
                           /* Animation card page */
-
-
 
 @keyframes fadeOut {
     0% {
@@ -224,7 +203,6 @@ li {
       visibility: hidden; /* Retiré de la page après 3s */
     }
 }
-
 @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -233,11 +211,11 @@ li {
       transform: rotate(360deg);
     }
 }
+                        /* Affiche contenu après 3 secondes */
 
-/* Affiche contenu après 3 secondes */
 body.content {
     display: block;
-    overflow: auto; /* Réactive le scrolling */
+    overflow: auto;            /* Réactive le scrolling */
 }
 
 
