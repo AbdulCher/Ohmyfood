@@ -4,14 +4,13 @@
                             /* IMAGE Page menu*/
 
 .imageMyResto {
-    .imageMyResto__page1 {
+    &__page1 {
         aspect-ratio: 16/8;
         @include mixins.image;
     }
-    .imageMyResto__page2 {
+    &__page2 {
         aspect-ratio: 16/10;
         @include mixins.image;
-        /*clip-path: inset(20px 0px 0px 0px);*/
     }
 }
 
@@ -40,7 +39,7 @@ body {
 .myResto {
     @include mixins.flex-column-justSpaceBetween;
     padding: 20px;
-    .myResto__title-group {
+    &__title-group {
         @include mixins.flex-row-justSpaceBetween;
         padding: 10px 10px 30px 0px;
         font-family: "Shrikhand", serif;
@@ -74,7 +73,7 @@ body {
     cursor: pointer; 
     color: black;
     overflow: hidden;
-    .menuBtn__text {
+    &__text {
         padding-top: 10px;
         padding-left: 10px;
         padding-bottom: 10px;
@@ -90,7 +89,7 @@ body {
             line-height: 20px;
         } 
     }
-    .menuBtn__groupPriceIcon {
+    &__groupPriceIcon {
         @include mixins.flex-row;
         justify-content: flex-end;
         align-items: flex-end;
@@ -108,8 +107,8 @@ body {
             background-color: variables.$light-green;
             border-radius: 0px 10px 10px 0px;
             padding: 10px 30px 14px 10px; /* augmente taille Btn*/
-            font-size: 34px;
-            opacity: 1; /* opacity du btn icon aller-retour de transition*/
+            font-size: 34px;  /* taille de l'icône check */
+            opacity: 1; /* opacity btn icône aller-retour de transition*/
             transition: transform 1s linear, opacity 0.2s ease-out;
         }
         .menuBtn__group--check {
@@ -192,25 +191,7 @@ body {
 li {
     margin-right: 0px;
 }
-                          /* Animation card page */
 
-@keyframes fadeOut {
-    0% {
-      opacity: 1; /* Visible au départ */
-    }
-    100% {
-      opacity: 0; /* invisible après 3s */
-      visibility: hidden; /* Retiré de la page après 3s */
-    }
-}
-@keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-}
                         /* Affiche contenu après 3 secondes */
 
 body.content {

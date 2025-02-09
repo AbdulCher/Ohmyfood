@@ -6,14 +6,14 @@
 .info {
     text-align: center;
     background-color: variables.$light-gray;
-    .info__title {
+    &__title {
         @include mixins.font-title;
         padding: 20px 60px 10px 60px;   
     }
-    .info__text {
+    &__text {
         padding: 0px 50px 20px 20px;
     }
-    .info__main-btn {
+    &__main-btn {
        padding-top: 40px;
         padding-bottom: 40px;
     }
@@ -21,14 +21,14 @@
                             /*  Nav  */
 .navi {
     margin-bottom: 60px;
-    .navi__title {
+    &__title {
         @include mixins.font-title;
         padding: 20px 80px 10px 20px;   
     } 
-    .navi__list {
+    &__list {
         cursor: default;
     }
-    .navi__list-group {
+    &__list-group {
         border-radius: 24px;
         margin: 20px 20px 0px 20px;
         background-color: variables.$light-gray;
@@ -56,18 +56,18 @@
                         /*    Main      */
 .theResto {
     background-color: variables.$light-gray;
-    .theResto__title {
+    &__title {
         @include mixins.font-title;
         margin-left: 20px;
         padding-top: 50px
     }
-    .theResto__content1 {
+    &__content1 {
         @include mixins.flex-column;
         justify-content: space-between;
         width: 100%;
         height: 100%;
     }
-    .theResto__content2 {
+    &__content2 {
         @include mixins.flex-column;
         justify-content: space-between;
         width: 100%;
@@ -83,7 +83,7 @@
     background-color: white;
     margin: 20px;
     border-radius: 20px;
-    .card__imageBand {
+    &__imageBand {
         position: relative; 
         .card__imageBand--image {
             aspect-ratio: 16/9;
@@ -101,7 +101,7 @@
             background-color: variables.$light-green;
         }   
     }
-    .card__info {
+    &__info {
         @include mixins.flex-column;
         padding: 10px 10px 38px 10px;
         .card__info--title {
@@ -112,7 +112,7 @@
         }
         
     }  
-    .card__like {
+    &__like {
         display: flex;
         justify-content: flex-end;
         
@@ -122,7 +122,7 @@
         font-weight: lighter;
         
     }
-    .card__like label {
+    &__like label {
         font-size: 24px; 
         color: black;
         cursor: pointer;
@@ -146,7 +146,7 @@
 /* Icône cochée (pleine) */
 .hidden-checkbox:checked + label::before {
     font-family: "Font Awesome 6 Free"; /* Font Awesome */
-    font-weight: 900; /* Passe en fa-solid */
+    font-weight: 900; /* Icône passe en fa-solid, plein */
     content: '\f004'; /* Code unicode pour le cœur plein */
     background: linear-gradient(175deg, #ff79da, #9356dc);
     -webkit-background-clip: text;

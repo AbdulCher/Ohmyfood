@@ -151,15 +151,15 @@ table {
   text-align: center;
   background-color: #F3F3F3;
 }
-.info .info__title {
+.info__title {
   font-weight: bolder;
   font-size: 24px;
   padding: 20px 60px 10px 60px;
 }
-.info .info__text {
+.info__text {
   padding: 0px 50px 20px 20px;
 }
-.info .info__main-btn {
+.info__main-btn {
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -168,15 +168,15 @@ table {
 .navi {
   margin-bottom: 60px;
 }
-.navi .navi__title {
+.navi__title {
   font-weight: bolder;
   font-size: 24px;
   padding: 20px 80px 10px 20px;
 }
-.navi .navi__list {
+.navi__list {
   cursor: default;
 }
-.navi .navi__list-group {
+.navi__list-group {
   border-radius: 24px;
   margin: 20px 20px 0px 20px;
   background-color: #F3F3F3;
@@ -184,7 +184,7 @@ table {
   transition-duration: 100ms;
   padding: 10px 30px 10px 10px;
 }
-.navi .navi__list-group .navi__list--number {
+.navi__list-group .navi__list--number {
   margin: -24px;
   padding: 6px 8px;
   border-radius: 50px;
@@ -192,11 +192,11 @@ table {
   background-color: #9356DC;
   color: white;
 }
-.navi .navi__list-group .navi__list--icon {
+.navi__list-group .navi__list--icon {
   padding: 20px 30px 20px 30px;
   color: gray;
 }
-.navi .navi__list-group .navi__list--icon3 {
+.navi__list-group .navi__list--icon3 {
   color: #9356DC;
   padding: 20px 30px 20px 30px;
 }
@@ -205,20 +205,20 @@ table {
 .theResto {
   background-color: #F3F3F3;
 }
-.theResto .theResto__title {
+.theResto__title {
   font-weight: bolder;
   font-size: 24px;
   margin-left: 20px;
   padding-top: 50px;
 }
-.theResto .theResto__content1 {
+.theResto__content1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   height: 100%;
 }
-.theResto .theResto__content2 {
+.theResto__content2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -237,17 +237,17 @@ table {
   margin: 20px;
   border-radius: 20px;
 }
-.card .card__imageBand {
+.card__imageBand {
   position: relative;
 }
-.card .card__imageBand .card__imageBand--image {
+.card__imageBand .card__imageBand--image {
   aspect-ratio: 16/9;
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-.card .card__imageBand .card__imageBand--badge {
+.card__imageBand .card__imageBand--badge {
   position: absolute;
   top: 10%;
   left: 72%;
@@ -255,12 +255,12 @@ table {
   color: green;
   background-color: #99E2D0;
 }
-.card .card__info {
+.card__info {
   display: flex;
   flex-direction: column;
   padding: 10px 10px 38px 10px;
 }
-.card .card__info .card__info--title {
+.card__info .card__info--title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -269,7 +269,7 @@ table {
   font-size: 18px;
   color: black;
 }
-.card .card__like {
+.card__like {
   display: flex;
   justify-content: flex-end;
   margin-top: -70px;
@@ -277,7 +277,7 @@ table {
   padding-right: 8px;
   font-weight: lighter;
 }
-.card .card__like label {
+.card__like label {
   font-size: 24px;
   color: black;
   cursor: pointer;
@@ -299,7 +299,7 @@ table {
 /* Icône cochée (pleine) */
 .hidden-checkbox:checked + label::before {
   font-family: "Font Awesome 6 Free"; /* Font Awesome */
-  font-weight: 900; /* Passe en fa-solid */
+  font-weight: 900; /* Icône passe en fa-solid, plein */
   content: "\f004"; /* Code unicode pour le cœur plein */
   background: linear-gradient(175deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
@@ -308,20 +308,19 @@ table {
 }
 
 /* IMAGE Page menu*/
-.imageMyResto .imageMyResto__page1 {
+.imageMyResto__page1 {
   aspect-ratio: 16/8;
   /*aspect-ratio: 16/9;*/
   width: 100%;
   margin: 0px;
   object-fit: cover;
 }
-.imageMyResto .imageMyResto__page2 {
+.imageMyResto__page2 {
   aspect-ratio: 16/10;
   /*aspect-ratio: 16/9;*/
   width: 100%;
   margin: 0px;
   object-fit: cover;
-  /*clip-path: inset(20px 0px 0px 0px);*/
 }
 
 /*   MAIN Page  */
@@ -349,7 +348,7 @@ body .bloc3 {
   justify-content: space-between;
   padding: 20px;
 }
-.myResto .myResto__title-group {
+.myResto__title-group {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -387,49 +386,49 @@ body .bloc3 {
   color: black;
   overflow: hidden;
 }
-.menuBtn .menuBtn__text {
+.menuBtn__text {
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 10px;
   flex-grow: 1; /* Permet au texte de s’adapter */
 }
-.menuBtn .menuBtn__text .menuBtn__text--title {
+.menuBtn__text .menuBtn__text--title {
   font-weight: bolder;
   font-size: 18px;
   color: black;
 }
-.menuBtn .menuBtn__text .menuBtn__text--content {
+.menuBtn__text .menuBtn__text--content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 15px;
   line-height: 20px;
 }
-.menuBtn .menuBtn__groupPriceIcon {
+.menuBtn__groupPriceIcon {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
   margin-right: 0px;
 }
-.menuBtn .menuBtn__groupPriceIcon .menuBtn__group--price {
+.menuBtn__groupPriceIcon .menuBtn__group--price {
   margin-right: 0px;
   padding-bottom: 10px;
   padding-right: 16px;
   transition: transform 1s linear; /* Durée 1s avant un effet fluide*/
 }
-.menuBtn .menuBtn__groupPriceIcon .menuBtn__group--icon {
+.menuBtn__groupPriceIcon .menuBtn__group--icon {
   position: absolute;
   top: 0px;
   margin-right: -66px;
   background-color: #99E2D0;
   border-radius: 0px 10px 10px 0px;
   padding: 10px 30px 14px 10px; /* augmente taille Btn*/
-  font-size: 34px;
-  opacity: 1; /* opacity du btn icon aller-retour de transition*/
+  font-size: 34px; /* taille de l'icône check */
+  opacity: 1; /* opacity btn icône aller-retour de transition*/
   transition: transform 1s linear, opacity 0.2s ease-out;
 }
-.menuBtn .menuBtn__groupPriceIcon .menuBtn__group--check {
+.menuBtn__groupPriceIcon .menuBtn__group--check {
   background-color: white;
   color: #99E2D0;
   border-radius: 50px;
@@ -514,24 +513,6 @@ li {
   margin-right: 0px;
 }
 
-/* Animation card page */
-@keyframes fadeOut {
-  0% {
-    opacity: 1; /* Visible au départ */
-  }
-  100% {
-    opacity: 0; /* invisible après 3s */
-    visibility: hidden; /* Retiré de la page après 3s */
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 /* Affiche contenu après 3 secondes */
 body.content {
   display: block;
@@ -657,7 +638,7 @@ input {
 }
 
 /*   LOADER   */
-.content__loader {
+.content__loader { /*  Fond d'écran pour masquer la page */
   position: fixed;
   top: 0;
   left: 0;
@@ -672,7 +653,7 @@ input {
   /* Style du loader (cercle animé) */
 }
 
-.content__loader-page {
+.content__loader-page { /* Ceci est mon loader */
   width: 50px;
   height: 50px;
   border: 5px solid #007BFF; /* Bordure bleue */
@@ -681,13 +662,23 @@ input {
   animation: spin 1s linear infinite; /* Rotation infinie */
 }
 
-.content {
-  display: none; /*mon body caché tant que loader visible */
+/* Animation card page */
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* Visible au départ */
+  }
+  100% {
+    opacity: 0; /* invisible après 3s */
+    visibility: hidden; /* Retiré de la page après 3s */
+  }
 }
-
-/* Affiche contenu une fois loader disparaît */
-.content__loader {
-  animation: fadeOut 3s forwards ease-in-out;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
